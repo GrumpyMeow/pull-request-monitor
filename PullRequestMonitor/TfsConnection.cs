@@ -46,7 +46,7 @@ namespace PullRequestMonitor
         {
             var task = Task.Run(() =>
             {
-                var getProjectsTask = _projectHttpClient.Value.GetProjects();
+                var getProjectsTask = _projectHttpClient.Value.GetProjects(null, 1000, 0);
 
                 getProjectsTask.Wait();
 
